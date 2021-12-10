@@ -4,5 +4,5 @@ const server = require("./api/server.js");
 const PORT = process.env.PORT || 9000;
 
 server.listen(PORT, () => {
-  console.log(`listening on port:${PORT}, the Pike!`);
+  console.log(`listening on port: ${PORT}`);
 });
