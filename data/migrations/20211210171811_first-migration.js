@@ -24,7 +24,14 @@ exports.up = function(knex) {
         table.string("task_notes", 200);
         table.boolean("task_completed", false);
     })
-    
+
+    // Resource Assignment
+    .createTable("project_resources", (table) => {
+        table.increments("project-resources_id");
+        table.integer("project_id");
+        table.integer("resource_id");
+    })
+
 };
 
 exports.down = function(knex) {
